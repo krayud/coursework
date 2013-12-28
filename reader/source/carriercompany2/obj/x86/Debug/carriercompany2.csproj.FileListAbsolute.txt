@@ -1,0 +1,9 @@
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\bin\Debug\carriercompany2.exe
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\bin\Debug\carriercompany2.pdb
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\obj\x86\Debug\carriercompany2.MainForm.resources
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\obj\x86\Debug\carriercompany2.Properties.Resources.resources
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\obj\x86\Debug\carriercompany2.csproj.GenerateResource.Cache
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\obj\x86\Debug\carriercompany2.exe
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\obj\x86\Debug\carriercompany2.pdb
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\obj\x86\Debug\carriercompany2.SelectionsForm.resources
+C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\obj\x86\Debug\carriercompany2.csprojResolveAssemblyReference.cache
