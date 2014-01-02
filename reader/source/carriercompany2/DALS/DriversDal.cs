@@ -14,20 +14,24 @@ namespace carriercompany2.DALS
 
         public ArrayList GetAllDrivers()
         {
-            dal.SetQuery("SELECT * FROM drivers");
+            dal.SetQuery(@"SELECT drivers.name as [Имя], transport.number as [Номер авто] 
+                            FROM drivers
+	                            JOIN transport ON transport.id = drivers.car_id");
             return dal.ExecuteQueryArrayList();
         }
 
-        public ArrayList GetAllDriversByCarId(string carId)
+        public ArrayList GetAllDriversByCarNumber(string carNumber)
         {
-            string query = string.Format("SELECT drivers.name as [Имя] FROM drivers WHERE drivers.car_id = {0}", carId);
+            string query = string.Format("SELECT drivers.name as [Имя] FROM drivers, transport WHERE drivers.car_id = transport.id AND transport.number = '{0}'", carNumber);
             dal.SetQuery(query);
             return dal.ExecuteQueryArrayList();
         }
 
         public ArrayList DriversDistributionByCar()
         {
-            dal.SetQuery("SELECT drivers.name as [Имя], transport.id as [ID транспорта] FROM drivers, transport WHERE drivers.car_id = transport.id");
+            dal.SetQuery(@"SELECT drivers.name as [Имя], transport.number as [Номер авто] 
+                            FROM drivers
+	                            JOIN transport ON transport.id = drivers.car_id");
             return dal.ExecuteQueryArrayList();
         }
     }

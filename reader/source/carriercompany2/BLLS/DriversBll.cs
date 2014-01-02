@@ -27,18 +27,13 @@ namespace carriercompany2.BLLS
             }
             else if (form.byCarId1.Checked)
             {
-                string carId = form.driversCarId1.Text;
-
-                int carIdInt;
-                bool checkInt = int.TryParse(carId, out carIdInt);
-
-                if (checkInt == false || carIdInt <= 0)
-                    MessageBox.Show("ID транспорта должен быть больше 0");
+                string carNumber = form.driversCarId1.Text;
+                allDriversList = driversDal.GetAllDriversByCarNumber(carNumber);
+                if (allDriversList.Count <= 0)
+                    MessageBox.Show("Записей не найдено");
                 else
-                {
-                    allDriversList = driversDal.GetAllDriversByCarId(carId);
                     form.driversDGV1.DataSource = allDriversList;
-                }
+                
             }
             form.driversCountLabel.Text = Convert.ToString(allDriversList.Count);
         }

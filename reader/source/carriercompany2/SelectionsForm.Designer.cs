@@ -230,6 +230,7 @@
             // 
             this.driversCarId1.Enabled = false;
             this.driversCarId1.Location = new System.Drawing.Point(241, 22);
+            this.driversCarId1.MaxLength = 10;
             this.driversCarId1.Name = "driversCarId1";
             this.driversCarId1.Size = new System.Drawing.Size(124, 20);
             this.driversCarId1.TabIndex = 2;
@@ -237,11 +238,11 @@
             // byCarId1
             // 
             this.byCarId1.AutoSize = true;
-            this.byCarId1.Location = new System.Drawing.Point(115, 22);
+            this.byCarId1.Location = new System.Drawing.Point(130, 23);
             this.byCarId1.Name = "byCarId1";
-            this.byCarId1.Size = new System.Drawing.Size(117, 17);
+            this.byCarId1.Size = new System.Drawing.Size(105, 17);
             this.byCarId1.TabIndex = 1;
-            this.byCarId1.Text = "По ID автомобиля";
+            this.byCarId1.Text = "По номеру авто";
             this.byCarId1.UseVisualStyleBackColor = true;
             this.byCarId1.CheckedChanged += new System.EventHandler(this.byCarId1_CheckedChanged);
             // 
@@ -249,7 +250,7 @@
             // 
             this.allDrivers.AutoSize = true;
             this.allDrivers.Checked = true;
-            this.allDrivers.Location = new System.Drawing.Point(6, 22);
+            this.allDrivers.Location = new System.Drawing.Point(6, 23);
             this.allDrivers.Name = "allDrivers";
             this.allDrivers.Size = new System.Drawing.Size(94, 17);
             this.allDrivers.TabIndex = 0;
@@ -634,10 +635,10 @@
             this.transportTrafficRadioId.AutoSize = true;
             this.transportTrafficRadioId.Location = new System.Drawing.Point(239, 20);
             this.transportTrafficRadioId.Name = "transportTrafficRadioId";
-            this.transportTrafficRadioId.Size = new System.Drawing.Size(117, 17);
+            this.transportTrafficRadioId.Size = new System.Drawing.Size(105, 17);
             this.transportTrafficRadioId.TabIndex = 3;
             this.transportTrafficRadioId.TabStop = true;
-            this.transportTrafficRadioId.Text = "По ID автомобиля";
+            this.transportTrafficRadioId.Text = "По номеру авто";
             this.transportTrafficRadioId.UseVisualStyleBackColor = true;
             this.transportTrafficRadioId.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -657,6 +658,7 @@
             // 
             this.transportTrafficCarId.Enabled = false;
             this.transportTrafficCarId.Location = new System.Drawing.Point(239, 43);
+            this.transportTrafficCarId.MaxLength = 10;
             this.transportTrafficCarId.Name = "transportTrafficCarId";
             this.transportTrafficCarId.Size = new System.Drawing.Size(135, 20);
             this.transportTrafficCarId.TabIndex = 1;
@@ -741,15 +743,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 32);
+            this.label7.Location = new System.Drawing.Point(16, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 13);
+            this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 3;
-            this.label7.Text = "ID автомобиля";
+            this.label7.Text = "Номер авто";
             // 
             // truckingCarId
             // 
-            this.truckingCarId.Location = new System.Drawing.Point(103, 29);
+            this.truckingCarId.Location = new System.Drawing.Point(89, 29);
+            this.truckingCarId.MaxLength = 10;
             this.truckingCarId.Name = "truckingCarId";
             this.truckingCarId.Size = new System.Drawing.Size(100, 20);
             this.truckingCarId.TabIndex = 2;

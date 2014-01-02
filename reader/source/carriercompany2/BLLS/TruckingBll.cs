@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using carriercompany2.DALS;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace carriercompany2.BLLS
 {
@@ -18,12 +19,19 @@ namespace carriercompany2.BLLS
         {
             DateTime DateFrom = form.truckingDateFrom.Value;
             DateTime DateTo = form.truckingDateTo.Value;
-            int carId = 0;
+            string carId = form.truckingCarId.Text;
 
-            if (int.TryParse(form.truckingCarId.Text, out carId) && carId > 0)
-                form.truckingDGV.DataSource = truckingDal.GetTrucks(carId, DateFrom, DateTo);
+            if (carId != "")
+            {
+                ArrayList truckings = truckingDal.GetTrucks(carId, DateFrom, DateTo);
+
+                if (truckings.Count <= 0)
+                    MessageBox.Show("Записей не найдено");
+                else
+                    form.truckingDGV.DataSource = truckings; 
+            }
             else
-                MessageBox.Show("Некорректный ID транспорта");
+                MessageBox.Show("Некорректный номер транспорта");
         }
 
     }

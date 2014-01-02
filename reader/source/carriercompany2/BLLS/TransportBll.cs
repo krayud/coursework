@@ -18,6 +18,7 @@ namespace carriercompany2.BLLS
         private bool firstCheckType = true;
         private bool firstCheckMark = true;
         private bool TrafficRadioTypeFirstCheck = true;
+        private bool trafficFirstOpen = true;
 
         public TransportBll(SelectionsForm formLink) { form = formLink; }
 
@@ -88,7 +89,10 @@ namespace carriercompany2.BLLS
                     carTotalPrice = record.GetValue(1).ToString();
                 }
 
-                form.transportCountPriceDGV.DataSource = carsList;
+                if (carsList.Count <= 0)
+                    MessageBox.Show("Записей не найдено");
+                else
+                    form.transportCountPriceDGV.DataSource = carsList;
 
                 form.transportCountLabel.Text = carCountStr;
                 form.transportPriceLabel.Text = (carTotalPrice == "") ? "0" : carTotalPrice;
@@ -102,21 +106,26 @@ namespace carriercompany2.BLLS
 
         public void TrafficFirstOpen()
         {
-            int year = DateTime.Today.Year;
-            int month = DateTime.Today.Month;
-            int day = DateTime.Today.Day;
+            if (trafficFirstOpen)
+            {
+                int year = DateTime.Today.Year;
+                int month = DateTime.Today.Month;
+                int day = DateTime.Today.Day;
 
-            for (int y = year; y >= 2000 ; y--)
-                form.transportTrafficYear.Items.Add(y.ToString());
-            form.transportTrafficYear.SelectedText = year.ToString();
+                for (int y = year; y >= 2000; y--)
+                    form.transportTrafficYear.Items.Add(y.ToString());
+                form.transportTrafficYear.SelectedText = year.ToString();
 
-            for (int m = 1; m <= 12; m++)
-                form.transportTrafficMonth.Items.Add(m.ToString());
-            form.transportTrafficMonth.SelectedText = month.ToString();
+                for (int m = 1; m <= 12; m++)
+                    form.transportTrafficMonth.Items.Add(m.ToString());
+                form.transportTrafficMonth.SelectedText = month.ToString();
 
-            for (int d = 1; d <= 31; d++)
-                form.transportTrafficDay.Items.Add(d.ToString());
-            form.transportTrafficDay.SelectedText = day.ToString();
+                for (int d = 1; d <= 31; d++)
+                    form.transportTrafficDay.Items.Add(d.ToString());
+                form.transportTrafficDay.SelectedText = day.ToString();
+
+                trafficFirstOpen = false;
+            }
         }
 
         public void TrafficTypeChange() 
@@ -142,7 +151,7 @@ namespace carriercompany2.BLLS
         public void ShowTraffic()
         {
             int type = 0;
-            int carId = 0;
+            string carId = form.transportTrafficCarId.Text;
             int month = (form.trafficMonthCheck.Checked) ? Convert.ToInt32(form.transportTrafficMonth.Text) : 0;
             int day = (form.trafficDayCheck.Checked) ? Convert.ToInt32(form.transportTrafficDay.Text): 0;
             int year = (form.trafficYearCheck.Checked) ? Convert.ToInt32(form.transportTrafficYear.Text): 0;
@@ -153,17 +162,24 @@ namespace carriercompany2.BLLS
                 if (form.transportTrafficRadioId.Checked)
                 {
 
-                    if (!int.TryParse(form.transportTrafficCarId.Text, out carId) || carId <= 0)
+                    if (carId == "")
                     {
-                        MessageBox.Show("Некорректный ID транспорта");
+                        MessageBox.Show("Некорректный номер транспорта");
                         return;
                     }
                 }
 
-            if ((month == 0 && day == 0 && year == 0) || (type == 0 && carId == 0))
+            if ((month == 0 && day == 0 && year == 0) || (type == 0 && carId == ""))
                 MessageBox.Show("Некорректные параметры поиска");
             else
-                form.transportTrafficDGV.DataSource = transDal.GetTraffic(type, carId, year, month, day);
+            {
+                ArrayList traffic = transDal.GetTraffic(type, carId, year, month, day);
+
+                if(traffic.Count <= 0)
+                    MessageBox.Show("Записей не найдено");
+                else
+                    form.transportTrafficDGV.DataSource = traffic;
+            }
 
         }
     }

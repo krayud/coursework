@@ -53,7 +53,7 @@ namespace carriercompany2.DALS
 
         public ArrayList GetCarsByTypeOrMark(int type, int mark)
         {
-            string query = @"SELECT transport.id, transport_types.name as [Тип], marks.name as [Марка], transport.price as [Цена] 
+            string query = @"SELECT transport.number as [Номер авто], transport_types.name as [Тип], marks.name as [Марка], transport.price as [Цена] 
                              FROM transport, transport_types, marks WHERE";
 
             if (type > 0 && mark > 0)
@@ -71,16 +71,16 @@ namespace carriercompany2.DALS
             return dal.ExecuteQueryArrayList();
         }
 
-        public ArrayList GetTraffic(int type, int carId, int year, int month, int day)
+        public ArrayList GetTraffic(int type, string carId, int year, int month, int day)
         {
-            string query = @"SELECT transport.id as [ID транспорта], traffic.distance_km as [Пробег км.], traffic.date as [Дата] FROM  transport, traffic 
-                            WHERE traffic.transport_id = transport.id";
+            string query = @"SELECT transport.number as [Номер авто], traffic.distance_km as [Пробег км.], traffic.date as [Дата] 
+                             FROM  transport, traffic 
+                             WHERE traffic.transport_id = transport.id";
 
             if(type > 0)
                 query += string.Format(" AND transport.type = {0}", type); 
             else
-                if(carId > 0)
-                query += string.Format(" AND transport.mark = {0}", carId);
+                query += string.Format(" AND transport.number = '{0}'", carId);
 
             if (year != 0)
                 query += string.Format(" AND YEAR(traffic.date) = {0}", year);

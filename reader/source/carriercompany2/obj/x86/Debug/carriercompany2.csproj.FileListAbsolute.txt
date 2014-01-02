@@ -9,3 +9,10 @@ C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carri
 C:\Users\krayud\Desktop\Курсовая\Интерфейс\carriercompany\carriercompany2\carriercompany2\obj\x86\Debug\carriercompany2.csprojResolveAssemblyReference.cache
 D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.exe
 D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.pdb
+D:\gitrepositories\coursework\reader\source\carriercompany2\bin\Debug\carriercompany2.exe
+D:\gitrepositories\coursework\reader\source\carriercompany2\bin\Debug\carriercompany2.pdb
+D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.csprojResolveAssemblyReference.cache
+D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.MainForm.resources
+D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.Properties.Resources.resources
+D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.SelectionsForm.resources
+D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.csproj.GenerateResource.Cache

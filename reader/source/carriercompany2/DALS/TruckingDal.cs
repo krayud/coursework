@@ -11,9 +11,12 @@ namespace carriercompany2.DALS
         Dal dal = Dal.GetInstance();
 
 
-        public ArrayList GetTrucks(int carId, DateTime DateFrom, DateTime DateTo)
+        public ArrayList GetTrucks(string carId, DateTime DateFrom, DateTime DateTo)
         {
-            string query = string.Format(@"SELECT * FROM truckings WHERE truckings.car_id = {0} AND truckings.date BETWEEN '{1}' AND '{2}'",carId, DateFrom.ToShortDateString(), DateTo.ToShortDateString());
+            string query = string.Format(@"SELECT transport.number as [Номер авто], truckings.cargo as [Груз], truckings.date as [Дата]
+                                            FROM truckings, transport
+                                            WHERE truckings.car_id = transport.id AND transport.number = '{0}'
+                                            AND truckings.date BETWEEN '{1}' AND '{2}'", carId, DateFrom.ToShortDateString(), DateTo.ToShortDateString());
             dal.SetQuery(query);
             return dal.ExecuteQueryArrayList();
         }
