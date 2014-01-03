@@ -16,3 +16,13 @@ D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carrie
 D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.Properties.Resources.resources
 D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.SelectionsForm.resources
 D:\gitrepositories\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.csproj.GenerateResource.Cache
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.exe
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.pdb
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\bin\Debug\carriercompany2.exe.config
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\bin\Debug\carriercompany2.exe
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\bin\Debug\carriercompany2.pdb
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.csprojResolveAssemblyReference.cache
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.MainForm.resources
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.Properties.Resources.resources
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.SelectionsForm.resources
+C:\Users\Денис\Documents\coursework\reader\source\carriercompany2\obj\x86\Debug\carriercompany2.csproj.GenerateResource.Cache
