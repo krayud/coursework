@@ -68,22 +68,11 @@
     <Compile Include="BLLS\StaffBll.cs" />
     <Compile Include="BLLS\TransportBll.cs" />
     <Compile Include="BLLS\TruckingBll.cs" />
-    <Compile Include="carriercompanyDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>carriercompanyDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DALS\Dal.cs" />
     <Compile Include="DALS\DriversDal.cs" />
     <Compile Include="DALS\StaffDal.cs" />
     <Compile Include="DALS\TransportDal.cs" />
     <Compile Include="DALS\TruckingDal.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectionsForm.cs">
@@ -92,9 +81,6 @@
     <Compile Include="SelectionsForm.Designer.cs">
       <DependentUpon>SelectionsForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,18 +93,6 @@
     <EmbeddedResource Include="SelectionsForm.resx">
       <DependentUpon>SelectionsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
-    <None Include="carriercompanyDataSet.xsc">
-      <DependentUpon>carriercompanyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="carriercompanyDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>carriercompanyDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="carriercompanyDataSet.xss">
-      <DependentUpon>carriercompanyDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
