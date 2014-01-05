@@ -1,0 +1,3 @@
+﻿<appsettings>
+	<server connectionString="Data Source=NORMANDY\MESSAP;Initial Catalog=carriercompany;Integrated Security=True"/>
+</appsettings>
