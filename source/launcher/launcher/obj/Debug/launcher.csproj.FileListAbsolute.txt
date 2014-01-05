@@ -1,0 +1,8 @@
+D:\gitrepositories\coursework\source\launcher\launcher\bin\Debug\launcher.exe
+D:\gitrepositories\coursework\source\launcher\launcher\bin\Debug\launcher.pdb
+D:\gitrepositories\coursework\source\launcher\launcher\obj\Debug\launcher.csprojResolveAssemblyReference.cache
+D:\gitrepositories\coursework\source\launcher\launcher\obj\Debug\launcher.Form1.resources
+D:\gitrepositories\coursework\source\launcher\launcher\obj\Debug\launcher.Properties.Resources.resources
+D:\gitrepositories\coursework\source\launcher\launcher\obj\Debug\launcher.csproj.GenerateResource.Cache
+D:\gitrepositories\coursework\source\launcher\launcher\obj\Debug\launcher.exe
+D:\gitrepositories\coursework\source\launcher\launcher\obj\Debug\launcher.pdb

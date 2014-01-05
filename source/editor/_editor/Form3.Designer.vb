@@ -335,9 +335,11 @@ Partial Class Form3
         Me.Controls.Add(NumberLabel)
         Me.Controls.Add(Me.TransportBindingNavigator)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form3"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Редактировать"
         CType(Me.CarriercompanyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransportBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

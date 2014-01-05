@@ -23,32 +23,32 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Dim Transport_idLabel As System.Windows.Forms.Label
         Dim Distance_kmLabel As System.Windows.Forms.Label
         Dim DateLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Me.CarriercompanyDataSet = New _editor.carriercompanyDataSet()
         Me.TrafficBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TrafficTableAdapter = New _editor.carriercompanyDataSetTableAdapters.trafficTableAdapter()
         Me.TableAdapterManager = New _editor.carriercompanyDataSetTableAdapters.TableAdapterManager()
+        Me.TransportTableAdapter = New _editor.carriercompanyDataSetTableAdapters.transportTableAdapter()
         Me.TrafficBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.TrafficBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Distance_kmTextBox = New System.Windows.Forms.TextBox()
         Me.DateDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TransportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransportTableAdapter = New _editor.carriercompanyDataSetTableAdapters.transportTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
         Transport_idLabel = New System.Windows.Forms.Label()
         Distance_kmLabel = New System.Windows.Forms.Label()
@@ -59,6 +59,33 @@ Partial Class Form4
         Me.TrafficBindingNavigator.SuspendLayout()
         CType(Me.TransportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Transport_idLabel
+        '
+        Transport_idLabel.AutoSize = True
+        Transport_idLabel.Location = New System.Drawing.Point(12, 64)
+        Transport_idLabel.Name = "Transport_idLabel"
+        Transport_idLabel.Size = New System.Drawing.Size(89, 13)
+        Transport_idLabel.TabIndex = 1
+        Transport_idLabel.Text = "Гос. рег. номер:"
+        '
+        'Distance_kmLabel
+        '
+        Distance_kmLabel.AutoSize = True
+        Distance_kmLabel.Location = New System.Drawing.Point(12, 91)
+        Distance_kmLabel.Name = "Distance_kmLabel"
+        Distance_kmLabel.Size = New System.Drawing.Size(66, 13)
+        Distance_kmLabel.TabIndex = 3
+        Distance_kmLabel.Text = "Дистанция:"
+        '
+        'DateLabel
+        '
+        DateLabel.AutoSize = True
+        DateLabel.Location = New System.Drawing.Point(12, 120)
+        DateLabel.Name = "DateLabel"
+        DateLabel.Size = New System.Drawing.Size(36, 13)
+        DateLabel.TabIndex = 5
+        DateLabel.Text = "Дата:"
         '
         'CarriercompanyDataSet
         '
@@ -90,6 +117,10 @@ Partial Class Form4
         Me.TableAdapterManager.workersTableAdapter = Nothing
         Me.TableAdapterManager.workshopsTableAdapter = Nothing
         '
+        'TransportTableAdapter
+        '
+        Me.TransportTableAdapter.ClearBeforeFill = True
+        '
         'TrafficBindingNavigator
         '
         Me.TrafficBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -107,6 +138,31 @@ Partial Class Form4
         Me.TrafficBindingNavigator.Size = New System.Drawing.Size(284, 25)
         Me.TrafficBindingNavigator.TabIndex = 0
         Me.TrafficBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Добавить"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(43, 22)
+        Me.BindingNavigatorCountItem.Text = "для {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Общее число элементов"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Удалить"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -140,17 +196,10 @@ Partial Class Form4
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Текущее положение"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(43, 15)
-        Me.BindingNavigatorCountItem.Text = "для {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Общее число элементов"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -158,7 +207,7 @@ Partial Class Form4
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Переместить вперед"
         '
         'BindingNavigatorMoveLastItem
@@ -167,57 +216,21 @@ Partial Class Form4
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Переместить в конец"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Добавить"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Удалить"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'TrafficBindingNavigatorSaveItem
         '
         Me.TrafficBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.TrafficBindingNavigatorSaveItem.Image = CType(resources.GetObject("TrafficBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.TrafficBindingNavigatorSaveItem.Name = "TrafficBindingNavigatorSaveItem"
-        Me.TrafficBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.TrafficBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.TrafficBindingNavigatorSaveItem.Text = "Сохранить данные"
-        '
-        'Transport_idLabel
-        '
-        Transport_idLabel.AutoSize = True
-        Transport_idLabel.Location = New System.Drawing.Point(12, 64)
-        Transport_idLabel.Name = "Transport_idLabel"
-        Transport_idLabel.Size = New System.Drawing.Size(89, 13)
-        Transport_idLabel.TabIndex = 1
-        Transport_idLabel.Text = "Гос. рег. номер:"
-        '
-        'Distance_kmLabel
-        '
-        Distance_kmLabel.AutoSize = True
-        Distance_kmLabel.Location = New System.Drawing.Point(12, 91)
-        Distance_kmLabel.Name = "Distance_kmLabel"
-        Distance_kmLabel.Size = New System.Drawing.Size(66, 13)
-        Distance_kmLabel.TabIndex = 3
-        Distance_kmLabel.Text = "Дистанция:"
         '
         'Distance_kmTextBox
         '
@@ -226,16 +239,6 @@ Partial Class Form4
         Me.Distance_kmTextBox.Name = "Distance_kmTextBox"
         Me.Distance_kmTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Distance_kmTextBox.TabIndex = 4
-        '
-        'DateLabel
-        '
-        DateLabel.AutoSize = True
-        DateLabel.Location = New System.Drawing.Point(12, 120)
-        DateLabel.Name = "DateLabel"
-        DateLabel.Size = New System.Drawing.Size(36, 13)
-        DateLabel.TabIndex = 5
-        DateLabel.Text = "Дата:"
-
         '
         'DateDateTimePicker
         '
@@ -262,10 +265,6 @@ Partial Class Form4
         Me.TransportBindingSource.DataMember = "transport"
         Me.TransportBindingSource.DataSource = Me.CarriercompanyDataSet
         '
-        'TransportTableAdapter
-        '
-        Me.TransportTableAdapter.ClearBeforeFill = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -290,9 +289,11 @@ Partial Class Form4
         Me.Controls.Add(Transport_idLabel)
         Me.Controls.Add(Me.TrafficBindingNavigator)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form4"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Редактировать"
         CType(Me.CarriercompanyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrafficBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

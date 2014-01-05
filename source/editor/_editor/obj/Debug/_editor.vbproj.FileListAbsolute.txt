@@ -12,3 +12,17 @@ c:\users\денис\documents\visual studio 2012\Projects\_editor\_editor\obj\De
 c:\users\денис\documents\visual studio 2012\Projects\_editor\_editor\obj\Debug\_editor.Form3.resources
 c:\users\денис\documents\visual studio 2012\Projects\_editor\_editor\obj\Debug\_editor.Form4.resources
 c:\users\денис\documents\visual studio 2012\Projects\_editor\_editor\obj\Debug\_editor.Form5.resources
+D:\gitrepositories\coursework\source\editor\_editor\bin\Debug\_editor.exe.config
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.exe
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.xml
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.pdb
+D:\gitrepositories\coursework\source\editor\_editor\bin\Debug\_editor.exe
+D:\gitrepositories\coursework\source\editor\_editor\bin\Debug\_editor.pdb
+D:\gitrepositories\coursework\source\editor\_editor\bin\Debug\_editor.xml
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.Form1.resources
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.Form2.resources
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.Form3.resources
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.Form4.resources
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.Form5.resources
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.Resources.resources
+D:\gitrepositories\coursework\source\editor\_editor\obj\Debug\_editor.vbproj.GenerateResource.Cache

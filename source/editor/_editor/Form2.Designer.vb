@@ -23,33 +23,33 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Dim NameLabel As System.Windows.Forms.Label
         Dim Brigade_idLabel As System.Windows.Forms.Label
         Dim Car_idLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.CarriercompanyDataSet = New _editor.carriercompanyDataSet()
         Me.DriversBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DriversTableAdapter = New _editor.carriercompanyDataSetTableAdapters.driversTableAdapter()
         Me.TableAdapterManager = New _editor.carriercompanyDataSetTableAdapters.TableAdapterManager()
+        Me.BrigadesTableAdapter = New _editor.carriercompanyDataSetTableAdapters.brigadesTableAdapter()
+        Me.TransportTableAdapter = New _editor.carriercompanyDataSetTableAdapters.transportTableAdapter()
         Me.DriversBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.DriversBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.NameTextBox = New System.Windows.Forms.TextBox()
         Me.Brigade_idComboBox = New System.Windows.Forms.ComboBox()
         Me.BrigadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BrigadesTableAdapter = New _editor.carriercompanyDataSetTableAdapters.brigadesTableAdapter()
         Me.TransportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransportTableAdapter = New _editor.carriercompanyDataSetTableAdapters.transportTableAdapter()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         NameLabel = New System.Windows.Forms.Label()
@@ -62,6 +62,33 @@ Partial Class Form2
         CType(Me.BrigadesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'NameLabel
+        '
+        NameLabel.AutoSize = True
+        NameLabel.Location = New System.Drawing.Point(35, 69)
+        NameLabel.Name = "NameLabel"
+        NameLabel.Size = New System.Drawing.Size(37, 13)
+        NameLabel.TabIndex = 1
+        NameLabel.Text = "ФИО:"
+        '
+        'Brigade_idLabel
+        '
+        Brigade_idLabel.AutoSize = True
+        Brigade_idLabel.Location = New System.Drawing.Point(35, 96)
+        Brigade_idLabel.Name = "Brigade_idLabel"
+        Brigade_idLabel.Size = New System.Drawing.Size(52, 13)
+        Brigade_idLabel.TabIndex = 3
+        Brigade_idLabel.Text = "Бригада:"
+        '
+        'Car_idLabel
+        '
+        Car_idLabel.AutoSize = True
+        Car_idLabel.Location = New System.Drawing.Point(35, 123)
+        Car_idLabel.Name = "Car_idLabel"
+        Car_idLabel.Size = New System.Drawing.Size(72, 13)
+        Car_idLabel.TabIndex = 5
+        Car_idLabel.Text = "Автомобиль:"
         '
         'CarriercompanyDataSet
         '
@@ -93,6 +120,14 @@ Partial Class Form2
         Me.TableAdapterManager.workersTableAdapter = Nothing
         Me.TableAdapterManager.workshopsTableAdapter = Nothing
         '
+        'BrigadesTableAdapter
+        '
+        Me.BrigadesTableAdapter.ClearBeforeFill = True
+        '
+        'TransportTableAdapter
+        '
+        Me.TransportTableAdapter.ClearBeforeFill = True
+        '
         'DriversBindingNavigator
         '
         Me.DriversBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -110,6 +145,31 @@ Partial Class Form2
         Me.DriversBindingNavigator.Size = New System.Drawing.Size(284, 25)
         Me.DriversBindingNavigator.TabIndex = 0
         Me.DriversBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Добавить"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(43, 22)
+        Me.BindingNavigatorCountItem.Text = "для {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Общее число элементов"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Удалить"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -143,17 +203,10 @@ Partial Class Form2
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Текущее положение"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(43, 15)
-        Me.BindingNavigatorCountItem.Text = "для {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Общее число элементов"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -161,7 +214,7 @@ Partial Class Form2
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Переместить вперед"
         '
         'BindingNavigatorMoveLastItem
@@ -170,48 +223,21 @@ Partial Class Form2
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Переместить в конец"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Добавить"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Удалить"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'DriversBindingNavigatorSaveItem
         '
         Me.DriversBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.DriversBindingNavigatorSaveItem.Image = CType(resources.GetObject("DriversBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.DriversBindingNavigatorSaveItem.Name = "DriversBindingNavigatorSaveItem"
-        Me.DriversBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.DriversBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.DriversBindingNavigatorSaveItem.Text = "Сохранить данные"
-        '
-        'NameLabel
-        '
-        NameLabel.AutoSize = True
-        NameLabel.Location = New System.Drawing.Point(35, 69)
-        NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(37, 13)
-        NameLabel.TabIndex = 1
-        NameLabel.Text = "ФИО:"
         '
         'NameTextBox
         '
@@ -220,15 +246,6 @@ Partial Class Form2
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.Size = New System.Drawing.Size(150, 20)
         Me.NameTextBox.TabIndex = 2
-        '
-        'Brigade_idLabel
-        '
-        Brigade_idLabel.AutoSize = True
-        Brigade_idLabel.Location = New System.Drawing.Point(35, 96)
-        Brigade_idLabel.Name = "Brigade_idLabel"
-        Brigade_idLabel.Size = New System.Drawing.Size(52, 13)
-        Brigade_idLabel.TabIndex = 3
-        Brigade_idLabel.Text = "Бригада:"
         '
         'Brigade_idComboBox
         '
@@ -243,32 +260,15 @@ Partial Class Form2
         Me.Brigade_idComboBox.TabIndex = 4
         Me.Brigade_idComboBox.ValueMember = "id"
         '
-        'Car_idLabel
-        '
-        Car_idLabel.AutoSize = True
-        Car_idLabel.Location = New System.Drawing.Point(35, 123)
-        Car_idLabel.Name = "Car_idLabel"
-        Car_idLabel.Size = New System.Drawing.Size(72, 13)
-        Car_idLabel.TabIndex = 5
-        Car_idLabel.Text = "Автомобиль:"
-        '
         'BrigadesBindingSource
         '
         Me.BrigadesBindingSource.DataMember = "brigades"
         Me.BrigadesBindingSource.DataSource = Me.CarriercompanyDataSet
         '
-        'BrigadesTableAdapter
-        '
-        Me.BrigadesTableAdapter.ClearBeforeFill = True
-        '
         'TransportBindingSource
         '
         Me.TransportBindingSource.DataMember = "transport"
         Me.TransportBindingSource.DataSource = Me.CarriercompanyDataSet
-        '
-        'TransportTableAdapter
-        '
-        Me.TransportTableAdapter.ClearBeforeFill = True
         '
         'ComboBox1
         '
@@ -305,9 +305,11 @@ Partial Class Form2
         Me.Controls.Add(NameLabel)
         Me.Controls.Add(Me.NameTextBox)
         Me.Controls.Add(Me.DriversBindingNavigator)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form2"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Редактировать"
         CType(Me.CarriercompanyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DriversBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
