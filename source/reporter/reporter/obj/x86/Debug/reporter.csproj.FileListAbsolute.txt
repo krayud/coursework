@@ -1,0 +1,14 @@
+D:\gitrepositories\coursework\source\reporter\reporter\bin\Debug\reporter.exe.config
+D:\gitrepositories\coursework\source\reporter\reporter\bin\Debug\reporter.exe
+D:\gitrepositories\coursework\source\reporter\reporter\bin\Debug\reporter.pdb
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.csprojResolveAssemblyReference.cache
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.drivers.resources
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.Properties.Resources.resources
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.csproj.GenerateResource.Cache
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\RdlCompile.cache
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\RdlCompile.compiled
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.exe
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.pdb
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.Form1.resources
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.workers.resources
+D:\gitrepositories\coursework\source\reporter\reporter\obj\x86\Debug\reporter.cars.resources
